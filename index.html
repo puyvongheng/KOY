@@ -5,9 +5,78 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="index.css">
+    <style>
+      nav {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav.scrolled {
+    background-color: #333;
+}
+
+nav.scrolled a {
+    color: #fff;
+}
+
+
+
+
+.navbar {
+            background-color: #008cba;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+        
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .navbar button {
+            background-color:transparent;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .navbar button:hover {
+            background-color: #004a57;
+        }
+        
+
+    </style>
 </head>
 <body>
-    <nav></nav>
+  <nav>
+    <div class="navbar">
+      <button onclick="goHome()">Profile</button>
+      <button onclick="goHome()">  Skills</button>
+      <button onclick="goHome()">   Projects</button>
+   
+  </div>
+
+</nav>
 
 
     <main>
@@ -22,7 +91,7 @@
         <!--
         <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
     <h1>Myname is Puyvong Heng</h1>-->
-    <button id="btndetill"><p>seedetill</p></button>
+  
 
 </div>
     
@@ -75,21 +144,23 @@
         </div>
     </div>
 </div>
+
 <!--page project-->
 <div class="pageproject">
     <h1>my project</h1>
 
     <div class="displayY">
+      <a href="projectcode.html">
         <div class="projectbox">
             <h2>code</h2>
      
-
-          
-
         </div>
+</a>
+<a href="desing.html">
         <div class="projectbox"><h2>desing</h2>
         
         </div>
+      </a>
         <div class="projectbox"><h2>other</h2>
         
         </div>
@@ -98,7 +169,10 @@
     </main>
 
 
+ 
     <footer>&copf; 2024</footer>
+
+ 
     <script>
         // function([string1, string2],target id,[color1,color2])    
  consoleText(['Myname Is PUYVOG HRNG', '....', 'profile'], 'text',['tomato','rebeccapurple','lightblue']);
@@ -151,6 +225,23 @@ function consoleText(words, id, colors) {
     }
   }, 400)
 }
+
+
+
+
+
+
+
+window.addEventListener('scroll', function() {
+            var pageProject = document.getElementById('pageProject');
+            var nav = document.querySelector('nav');
+
+            if (pageProject.getBoundingClientRect().top <= 0) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
     </script>
     
 </body>

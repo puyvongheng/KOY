@@ -153,3 +153,28 @@ justify-content: center;
 
 
 }
+
+
+
+nav {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav.scrolled {
+    background-color: #333;
+}
+
+nav.scrolled a {
+    color: #fff;
+}
