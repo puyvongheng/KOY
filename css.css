@@ -76,12 +76,15 @@ h1 {
 
 .project-container {
     display: flex;
-    flex-wrap: wrap;
+   flex-direction: column;
+   width: 100%;
     gap: 20px; /* Space between project boxes */
+
     margin-top: 20px;
 }
 
 .project-box {
+    
     background-color: white;
     border: 1px solid #ddd;
     border-radius: 8px;
@@ -99,8 +102,7 @@ background-color: white;
 border: 1px solid #ddd;
 border-radius: 8px;
 padding: 20px;
-width: calc(33.333% - 40px); /* 3 columns with gap */
-box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+width: calc(90% - 40px); /* 3 columns with gap */
 position: relative; /* For absolute positioning of the button */
 }
 
