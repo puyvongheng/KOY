@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <style>
+      nav {
+    background-color: transparent;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 20px;
+}
+
+nav.scrolled {
+    background-color: #333;
+}
+
+nav.scrolled a {
+    color: #fff;
+}
+
+
+
+
+.navbar {
+            background-color: #008cba;
+            color: white;
+            padding: 10px 20px;
+            display: flex;
+        
+            align-items: center;
+        }
+
+        .navbar h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+
+        .navbar button {
+            background-color:transparent;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1em;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background-color 0.2s ease-in-out;
+        }
+
+        .navbar button:hover {
+            background-color: #004a57;
+        }
+        
+
+    </style>
+</head>
+<body>
+  <nav>
+    <div class="navbar">
+      <button onclick="goHome()">Profile</button>
+      <button onclick="goHome()">  Skills</button>
+      <button onclick="goHome()">   Projects</button>
+   
+  </div>
+
+</nav>
+
+
+    <main>
+
+<!--page profile-->        
+<div class="pageprofile">
+
+    <div class="pageprofiletext">
+        <h1>        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+        </h1>
+
+        <!--
+        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
+    <h1>Myname is Puyvong Heng</h1>-->
+  
+
+</div>
+    
+    <img id="picme" src="heng4x6.jpg" alt="">
+</div>
+
+
+
+
+
+
+
+<!--page skill-->
+<div class="pageskill">
+    <h1>my skill</h1>
+    <div class="displayY">
+        <div class="projectbox">
+            <h2>code</h2>
+           <ul>
+
+            <li>
+                <span >
+
+                    html
+                </span>
+          
+                <div><div></div></div>
+            </li>
+
+            <li>   <span > css</span>
+       <div><div>                        </div></div></li>
+            <li> <span > js</span> <div><div>                    </div></div></li>
+            <li> <span > java</span><div><div>                    </div></div></li>
+            <li> <span > python</span> <div><div>                 </div></div></li>
+           </ul>
+        </div>
+        <div class="projectbox"><h2>desing</h2>
+            <ul>
+                <li><span>canva</span><div><div style="width: 60%;">         </div></div></li>
+                <li><span>photh</span> <div><div>                         </div></div></li>
+                <li><span>ai</span><div><div>                                   </div></div></li>
+               </ul>
+        </div>
+        <div class="projectbox"><h2>other</h2>
+            <ul>
+                
+                <li><span>moho</span><div><div>  
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--page project-->
+<div class="pageproject">
+    <h1>my project</h1>
+
+    <div class="displayY">
+      <a href="projectcode.html">
+        <div class="projectbox">
+            <h2>code</h2>
+     
+        </div>
+</a>
+<a href="desing.html">
+        <div class="projectbox"><h2>desing</h2>
+        
+        </div>
+      </a>
+        <div class="projectbox"><h2>other</h2>
+        
+        </div>
+</div>
+
+    </main>
+
+
+ 
+    <footer>&copf; 2024</footer>
+
+ 
+    <script>
+        // function([string1, string2],target id,[color1,color2])    
+ consoleText(['Myname Is PUYVOG HRNG', '....', 'profile'], 'text',['tomato','rebeccapurple','lightblue']);
+
+function consoleText(words, id, colors) {
+  if (colors === undefined) colors = ['#fff'];
+  var visible = true;
+  var con = document.getElementById('console');
+  var letterCount = 1;
+  var x = 1;
+  var waiting = false;
+  var target = document.getElementById(id)
+  target.setAttribute('style', 'color:' + colors[0])
+  window.setInterval(function() {
+
+    if (letterCount === 0 && waiting === false) {
+      waiting = true;
+      target.innerHTML = words[0].substring(0, letterCount)
+      window.setTimeout(function() {
+        var usedColor = colors.shift();
+        colors.push(usedColor);
+        var usedWord = words.shift();
+        words.push(usedWord);
+        x = 1;
+        target.setAttribute('style', 'color:' + colors[0])
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (letterCount === words[0].length + 1 && waiting === false) {
+      waiting = true;
+      window.setTimeout(function() {
+        x = -1;
+        letterCount += x;
+        waiting = false;
+      }, 1000)
+    } else if (waiting === false) {
+      target.innerHTML = words[0].substring(0, letterCount)
+      letterCount += x;
+    }
+  }, 120)
+  window.setInterval(function() {
+    if (visible === true) {
+      con.className = 'console-underscore hidden'
+      visible = false;
+
+    } else {
+      con.className = 'console-underscore'
+
+      visible = true;
+    }
+  }, 400)
+}
+
+
+
+
+
+
+
+window.addEventListener('scroll', function() {
+            var pageProject = document.getElementById('pageProject');
+            var nav = document.querySelector('nav');
+
+            if (pageProject.getBoundingClientRect().top <= 0) {
+                nav.classList.add('scrolled');
+            } else {
+                nav.classList.remove('scrolled');
+            }
+        });
+    </script>
+    
+</body>
+</html>

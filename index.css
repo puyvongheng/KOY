@@ -1,82 +1,29 @@
-.pageprofile{
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-    display: flex;
-    padding: 50px;
 
-}
-
-.pageprofiletext{
-    width: 80%;
-}
-.pageprofiletext>h1{
-    font-size: 50px;
-    color: rgb(16, 145, 243);
-    height: 20%;
-  
-
-}
-
-#picme{
-    background-color: blue;
- 
-    height: fit-content;
-    width: 30vh;
-    border-radius: 50px;
-    display: none;
-}
-#btndetill{
-    background-color: rgb(0, 204, 255);
-    width: 150px;
-    font-size: 20px;
-    border: none;
-    border-radius: 50px;
-    text-align: center;
-    margin-left: 30%;
-}
-
-
-
-
-
-
-
-
-
-/*ssssssssss*/
-.pageskill{
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-    color: rgb(16, 145, 243);
-    
-}
-.pageskill>h1{
-    margin: 30px;
-    
-}
 .displayY{
     display: flex;
     margin: 20px;
     color: black;
+width: 90%;
+
+
 }
+
 .projectbox{
+    flex:auto;
     margin: 2px;
-    width: 33.33%;
     padding: 20px;
     background-color: rgb(255, 255, 255);
     border-radius: 20px;
-margin: 20px;  
-box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.668); 
+margin: 10px;  
+box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.291); 
 justify-content: center;
 
 
+
+
 }
 
-.projectbox>h2{
-    text-align: center;
 
-    height: 10%;
-}
 .projectbox>ul>li{
     background-color: rgb(255, 255, 255);
     padding: 10px;
@@ -93,15 +40,10 @@ justify-content: center;
 }
 .projectbox>ul>li>img{
     width: 20px;
-    
-    
-
 }
 .projectbox>ul>li>span{
     width: 30%;
   
-    
-    
 
 }
 
@@ -125,56 +67,28 @@ justify-content: center;
 }
 
 @media (max-width: 700px) {
-    .pageskill{
-        height: 100%;
-    }
+
 
     .displayY{
         display: flex;
         flex-direction: column;
         width: 100%;
+        
     }
 
     .projectbox{
-        margin: 2px;
+        margin: 10px;
         width: 70%;
-        padding: 20px;
-    margin: 20px;  
 
     
     }
 
 }
-/*vvvvvvvvvvvvvvvvv*/
-.pageproject{
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-    color: rgb(16, 145, 243);
-
-
-}
 
 
 
-nav {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
 
-nav a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 20px;
-}
 
-nav.scrolled {
-    background-color: #333;
-}
 
-nav.scrolled a {
-    color: #fff;
-}
+
+

@@ -3,189 +3,133 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Full Screen Scrolling Website</title>
+    <link rel="stylesheet" href="css.css">
     <link rel="stylesheet" href="index.css">
-    <style>
-      nav {
-    background-color: transparent;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-}
-
-nav a {
-    color: #333;
-    text-decoration: none;
-    margin-right: 20px;
-}
-
-nav.scrolled {
-    background-color: #333;
-}
-
-nav.scrolled a {
-    color: #fff;
-}
 
 
+<style>
 
-
-.navbar {
-            background-color: #008cba;
-            color: white;
-            padding: 10px 20px;
-            display: flex;
-        
-            align-items: center;
-        }
-
-        .navbar h1 {
-            margin: 0;
-            font-size: 1.5em;
-        }
-
-        .navbar button {
-            background-color:transparent;
-            border: none;
-            color: white;
-            padding: 10px 20px;
-            text-align: center;
-            text-decoration: none;
-            display: inline-block;
-            font-size: 1em;
-            cursor: pointer;
-            border-radius: 5px;
-            transition: background-color 0.2s ease-in-out;
-        }
-
-        .navbar button:hover {
-            background-color: #004a57;
-        }
-        
-
-    </style>
+  </style>
 </head>
 <body>
-  <nav>
-    <div class="navbar">
-      <button onclick="goHome()">Profile</button>
-      <button onclick="goHome()">  Skills</button>
-      <button onclick="goHome()">   Projects</button>
-   
-  </div>
+    <header>
+        <nav>
+            <a href="#section1" id="link1">Profile</a>
+            <a href="#section2" id="link2">My Skill</a>
+            <a href="#section3" id="link3">My Project</a>
+            <a href="#section4" id="link4">About Me</a>
+            <a href="#section5" id="link5">Contact</a>
+        </nav>
+    </header>
+    <!--1-->
+    <div class="section" id="section1">
+        <h1>
+            <div id="text"></div>
+           
 
-</nav>
+    </h1>
 
 
-    <main>
+    </div>
 
-<!--page profile-->        
-<div class="pageprofile">
 
-    <div class="pageprofiletext">
-        <h1>        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
-        </h1>
-
-        <!--
-        <div class='console-container'><span id='text'></span><div class='console-underscore' id='console'>&#95;</div></div>
-    <h1>Myname is Puyvong Heng</h1>-->
-  
-
-</div>
+    <!--2-->
+    <div class="section" id="section2">
+        <h1>My Skill</h1>
+        <div>hh</div>
+        <div class="displayY">
+            <div class="projectbox">
+                <h2>code</h2>
+               <ul>
     
-    <img id="picme" src="heng4x6.jpg" alt="">
-</div>
-
-
-
-
-
-
-
-<!--page skill-->
-<div class="pageskill">
-    <h1>my skill</h1>
-    <div class="displayY">
-        <div class="projectbox">
-            <h2>code</h2>
-           <ul>
-
-            <li>
-                <span >
-
-                    html
-                </span>
-          
-                <div><div></div></div>
-            </li>
-
-            <li>   <span > css</span>
-       <div><div>                        </div></div></li>
-            <li> <span > js</span> <div><div>                    </div></div></li>
-            <li> <span > java</span><div><div>                    </div></div></li>
-            <li> <span > python</span> <div><div>                 </div></div></li>
-           </ul>
-        </div>
-        <div class="projectbox"><h2>desing</h2>
-            <ul>
-                <li><span>canva</span><div><div style="width: 60%;">         </div></div></li>
-                <li><span>photh</span> <div><div>                         </div></div></li>
-                <li><span>ai</span><div><div>                                   </div></div></li>
+                <li>
+                    <span >
+    
+                        html
+                    </span>
+              
+                    <div><div></div></div>
+                </li>
+    
+                <li>   <span > css</span>
+           <div><div>                        </div></div></li>
+                <li> <span > js</span> <div><div>                    </div></div></li>
+                <li> <span > java</span><div><div>                    </div></div></li>
+                <li> <span > python</span> <div><div>                 </div></div></li>
                </ul>
-        </div>
-        <div class="projectbox"><h2>other</h2>
-            <ul>
-                
-                <li><span>moho</span><div><div>  
-
-            </ul>
+            </div>
+            <div class="projectbox"><h2>desing</h2>
+                <ul>
+                    <li><span>canva</span><div><div style="width: 60%;">         </div></div></li>
+                    <li><span>photh</span> <div><div>                         </div></div></li>
+                    <li><span>ai</span><div><div>                                   </div></div></li>
+                   </ul>
+            </div>
+        
         </div>
     </div>
-</div>
-
-<!--page project-->
-<div class="pageproject">
-    <h1>my project</h1>
-
-    <div class="displayY">
-      <a href="projectcode.html">
-        <div class="projectbox">
-            <h2>code</h2>
-     
+    <div class="section" id="section3">
+        <h1>My Project</h1>
+        <div class="project-container">
+            <div class="project-box">
+                <h2>Project desing</h2>
+                <p>Details about project 1.</p>
+                <a href="desing.html">Open</a>
+            </div>
+            <div class="project-box">
+                <h2>Project code</h2>
+                <p>Details about project 2.</p>
+                <a href="projectcode.html">Open</a>
+            </div>
+            <div class="project-box">
+                <h2>Project other</h2>
+                <p>Details about project 3.</p>
+                <a href="#">Open</a>
+            </div>
         </div>
-</a>
-<a href="desing.html">
-        <div class="projectbox"><h2>desing</h2>
-        
+    </div>
+    
+    
+    <div class="section" id="section4">
+        <h1>About Me</h1>
+        <div>
+            <p> About Me .</p>
         </div>
-      </a>
-        <div class="projectbox"><h2>other</h2>
-        
+    </div>
+    <div class="section" id="section5">
+        <h1>Contact</h1>
+        <div>
+            <p>d</p>
         </div>
-</div>
+    </div>
 
-    </main>
+    <!--footer-->
+    <footer>
+        &copy; 2024 Your Company
+    </footer>
 
 
- 
-    <footer>&copf; 2024</footer>
 
- 
+
+
+    <!--js code-->
     <script>
-        // function([string1, string2],target id,[color1,color2])    
- consoleText(['Myname Is PUYVOG HRNG', '....', 'profile'], 'text',['tomato','rebeccapurple','lightblue']);
+     // function([string1, string2],target id,[color1,color2])    
+     consoleText(['.......', '....', 'My Name Is PUYVOG HRNG'], 'text',['tomato','rebeccapurple','lightblue']);
 
 function consoleText(words, id, colors) {
-  if (colors === undefined) colors = ['#fff'];
+    if (colors === undefined) colors = ['#0195ff']; // Default color if no colors are provided
+
   var visible = true;
   var con = document.getElementById('console');
   var letterCount = 1;
   var x = 1;
   var waiting = false;
   var target = document.getElementById(id)
+
   target.setAttribute('style', 'color:' + colors[0])
+
   window.setInterval(function() {
 
     if (letterCount === 0 && waiting === false) {
@@ -232,17 +176,47 @@ function consoleText(words, id, colors) {
 
 
 
-window.addEventListener('scroll', function() {
-            var pageProject = document.getElementById('pageProject');
-            var nav = document.querySelector('nav');
 
-            if (pageProject.getBoundingClientRect().top <= 0) {
-                nav.classList.add('scrolled');
-            } else {
-                nav.classList.remove('scrolled');
-            }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const sections = document.querySelectorAll('.section');
+            const navLinks = document.querySelectorAll('nav a');
+
+            const observerOptions = {
+                root: null,
+                rootMargin: '0px',
+                threshold: 0.5
+            };
+
+            const observerCallback = (entries, observer) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        navLinks.forEach(link => {
+                            link.classList.toggle('active', link.getAttribute('href') === `#${entry.target.id}`);
+                        });
+                    }
+                });
+            };
+
+            const observer = new IntersectionObserver(observerCallback, observerOptions);
+
+            sections.forEach(section => observer.observe(section));
         });
     </script>
-    
 </body>
 </html>
