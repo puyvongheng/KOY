@@ -36,6 +36,13 @@
 }
 .projectbox>ul>li>span{
     width: 40%;
+    overflow: hidden;
+    margin-right: 2px;
+    transform: translateX(-20px);
+
+ 
+    
+
   
 
 }
