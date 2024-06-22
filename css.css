@@ -19,6 +19,8 @@ body {
 
 #section1 {
     background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
    
 }
 
@@ -153,4 +155,28 @@ nav a{
 .project-box {
 width: calc(90% - 20px); /* Full width without gap on smaller screens */
 }
+
+
+
+
+
+#section1 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+}
+
+.imgprogile
+{
+ 
+    width: 50%;
+
+}
+.name{
+background-color: transparent;
+
+margin-top: 10%;
 }

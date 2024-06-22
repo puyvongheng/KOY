@@ -1,19 +1,17 @@
 
 .displayY{
     display: flex;
-    margin: 20px;
     color: black;
-    width: 90%;
+    width: 100%;
 }
 
 .projectbox{
     flex:auto;
-    margin: 2px;
+    margin: 10px;
     padding: 10px;
     background-color: rgb(255, 255, 255);
-    border-radius: 20px;
-    margin: 10px;  
-   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.291); 
+    border-radius: 5px;
+   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.397); 
    justify-content: center;
 
 }
@@ -22,14 +20,10 @@
 .projectbox>ul>li{
     padding: 10px;
     width: 100%;
-
-
     list-style: none;
     font-size: 20px;
     display: flex;
     margin-left: -30px;
-
-    
 }
 .projectbox>ul>li>img{
     width: 20px;
@@ -39,20 +33,11 @@
     overflow: hidden;
     margin-right: 2px;
     transform: translateX(-20px);
-
- 
-    
-
-  
-
 }
-
-
-
 
 .projectbox>ul>li>div{
     background-color: rgb(147, 233, 255);
-    width: 70%;
+    width: 100%;
     border-radius: 100px;
     height: 1rem;
   
@@ -66,6 +51,27 @@
   
 }
 
+/* contact*/
+.contact{
+    display: flex;
+    gap: 50px;
+    margin-top: 50px;
+}
+.icon{
+   height: 50px;
+   width: 50px;
+   background-color: rgb(247, 247, 247);
+   border-radius: 100px;
+   color: white;
+   transition: all;
+   transition: 0.6s;
+}
+.icon:hover{
+    transform: scale(1.5);
+}
+
+
+
 @media (max-width: 700px) {
 
 
@@ -78,7 +84,8 @@
 
     .projectbox{
         margin: 10px;
-        width: 70%;
+        width: 85%;
+        justify-content: center;
 
     
     }
