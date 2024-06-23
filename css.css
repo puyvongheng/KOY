@@ -136,27 +136,86 @@ background-color: #0056b3;
 
 
 
+/* Define the keyframes */
+@keyframes colorChange {
+    0% {
+        border: 10px dotted rgb(13, 244, 13) ;
+      
+    }
+    50% {
+        border: 10px dotted rgb(255, 37, 197) ;
+     
+    }
+    100% {
+        border: 10px dotted rgb(255, 0, 0) ;
+      
+    }
+}
+/* Define the keyframes */
+@keyframes rotate10deg {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(180deg);
+        border: 10px dotted rgb(255, 0, 0) ;
+    }
+}
+@keyframes rotate-10deg {
+    0% {
+        transform: rotate(0deg);
+        border: 10px dotted rgb(13, 244, 13) ;
+    }
+    100% {
+        transform: rotate(-180deg);
+    }
+}
 
 
 
 
-.imgprogile
-{
+/* Apply the animation to the element */
+.animated-box {
+    width: 200px;
+    height: 200px;
+    animation: colorChange 4s infinite;
+}
+
+.key{
+  
+    border-radius: 1000px;
+    width: 320px;
+    height: 320px;
+    border-radius: 1000px;
+
+    border: 10px dotted rgb(34, 152, 255) ;
+    animation: colorChange 10s infinite;
+    margin-top: 80px;
+    justify-content: center;
+    animation: rotate10deg 2s infinite alternate;
+}
+
+
+
+
+
+
+.imgprogile{
     width: 50%;
     height: 100vh;
-    margin-top: 30px;
     text-align: center;
 
 }
 .imgp{
-
+    transform: rotate(1deg);
     width: 300px;
     height: 300px;
     border-radius: 1000px;
     border: 10px solid rgb(34, 152, 255);
     border: 10px dotted rgb(34, 152, 255) ;
-    
-    margin-top: 20px;
+    animation: colorChange 5s infinite;
+    animation: rotate-10deg 2s infinite alternate;
+
     transition: all 1s;
 }
 .imgp:hover{
