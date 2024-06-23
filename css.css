@@ -4,6 +4,12 @@ body {
     font-family: Arial, sans-serif;
     scroll-behavior: smooth; /* Smooth scrolling */
 }
+h1{
+    color: #0195ff;
+}
+h2{
+    color: #0195ff;
+}
 
 
 .section {
