@@ -155,7 +155,7 @@ background-color: #0056b3;
 @keyframes rotate10deg {
     0% {
         transform: rotate(0deg);
-        transform: scale(0.9);
+       
     }
     100% {
         
@@ -198,7 +198,7 @@ background-color: #0056b3;
     animation: colorChange 10s infinite;
     margin-top: 80px;
     justify-content: center;
-    animation: rotate10deg 1s infinite alternate;
+    animation: rotate10deg 2s infinite alternate;
 }
 
 
@@ -220,7 +220,7 @@ background-color: #0056b3;
     border: 10px solid rgb(34, 152, 255);
     border: 10px dotted rgb(34, 152, 255) ;
     animation: colorChange 5s infinite;
-    animation: rotate-10deg 1s infinite alternate;
+    animation: rotate-10deg 2s infinite alternate;
 
     transition: all 1s;
 }
