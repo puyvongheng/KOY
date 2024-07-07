@@ -1,101 +1,308 @@
-
-.displayY{
-    display: flex;
-    color: black;
-    width: 100%;
+body {
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth; /* Smooth scrolling */
+}
+h1{
+    color: #0195ff;
+}
+h2{
+    color: #0195ff;
 }
 
-.projectbox{
-    flex:auto;
-    margin: 10px;
-    padding: 10px;
-  
+
+.section {
+    height: 100vh; /* 100% of the viewport height */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align items at the start (left) */
+    padding-top: 80px; /* Adjust padding to prevent overlap with header */
+    padding-left: 20px; /* Add left padding for spacing */
+    scroll-snap-align: start;
+}
+
+#section1 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+
+   
+}
+
+#section2 {
+    background-color: #ffffff;
+    height: fit-content;
+}
+
+#section3 {
+    background-color: #ffffff;
+    height: fit-content;
+}
+
+#section4 {
+    background-color: #ffffff; /* About Me section background color */
+    height: fit-content;
+   
+}
+
+#section5 {
+    background-color: #ffffff; /* Contact section background color */
+}
+
+header, footer {
+    position: fixed;
+    width: 100%;
+    left: 0;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 1em;
+    text-align: center;
+    z-index: 10;
+}
+
+header {
+    top: 0;
+}
+
+footer {
+    bottom: 0;
+}
+
+nav a {
+    margin: 0 1em;
+    text-decoration: none;
+    color: #333;
+}
+
+nav a.active {
+    color: #0195ff; /* Color for the active section link */
+
+    text-decoration: underline greenyellow 3px dotted;
+
+}
+
+h1 {
+    margin: 0;
+    padding: 0; /* Remove default padding */
+}
+
+.project-container {
+    display: flex;
+   flex-direction: column;
+   width: 95%;
+    gap: 20px; /* Space between project boxes */
+    margin-top: 40px;
+ 
     border-radius: 5px;
-   box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.397); 
-   justify-content: center;
-
 }
 
 
-.projectbox>ul>li{
+.project-box h2 {
+    margin-top: 0;
+}
+
+.project-box {
+background-color: white;
+border: 4px  solid #0be8fc;
+border-radius: 8px;
+padding: 20px;
+width: calc(100% - 40px); /* 3 columns with gap */
+position: relative; /* For absolute positioning of the button */
+transition: all 1s;
+}
+
+.project-box>a{
+    color: #000000;
     padding: 10px;
-    width: 100%;
-    list-style: none;
-    font-size: 20px;
-    display: flex;
-    margin-left: -30px;
-}
-.projectbox>ul>li>img{
-    width: 20px;
-}
-.projectbox>ul>li>span{
-    width: 40%;
-    overflow: hidden;
-    margin-right: 2px;
-    transform: translateX(-20px);
+    background-color: #1c7e926e;
+    border-radius: 20px;
+    text-decoration: none;
 }
 
-.projectbox>ul>li>div{
-    background-color: rgb(147, 233, 255);
-    width: 100%;
-    border-radius: 100px;
-    height: 1rem;
-  
-}
-.projectbox>ul>li>div>div{
-    background-color: rgb(9, 194, 255);
-    width: 10%;
-    border-radius: 100px;
-    box-shadow: 1px 1px 10px rgba(37, 204, 255, 0.802);
-    height: 100%;
-  
+
+.open-btn {
+position: absolute;
+bottom: 20px;
+left: 50%;
+transform: translateX(-50%);
+background-color: #007bff;
+color: white;
+padding: 8px 16px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
 }
 
-/* contact*/
-.contact{
-    display: flex;
-    gap: 50px;
-    margin-top: 50px;
-}
-.icon{
-   height: 50px;
-   width: 50px;
-   background-color: rgb(247, 247, 247);
-   border-radius: 100px;
-   color: white;
-   transition: all;
-   transition: 0.6s;
-}
-.icon:hover{
-    transform: scale(1.5);
+.open-btn:hover {
+background-color: #0056b3;
 }
 
 
 
-@media (max-width: 700px) {
 
 
-    .displayY{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        
+
+
+/* Define the keyframes */
+@keyframes colorChange {
+    0% {
+        border: 10px dotted rgb(13, 244, 13) ;
+      
     }
+    50% {
+        border: 10px dotted rgb(255, 37, 197) ;
+     
+    }
+    100% {
+        border: 10px dotted rgb(255, 0, 0) ;
+      
+    }
+}
+/* Define the keyframes */
+@keyframes rotate10deg {
+    0% {
+        transform: rotate(0deg);
+       
+    }
+    100% {
+        
+        transform: rotate(180deg);
+        border: 10px dotted rgb(255, 0, 0) ;
+  
+    }
+}
+@keyframes rotate-10deg {
+    0% {
 
-    .projectbox{
-        margin: 10px;
-        width: 85%;
-        justify-content: center;
+        transform: rotate(0deg);
+        border: 10px dotted rgb(13, 244, 13) ;
+    }
+    100% {
+       
+        transform: rotate(-180deg);
+     
+    }
+}
 
+
+
+
+/* Apply the animation to the element */
+.animated-box {
+    width: 200px;
+    height: 200px;
+    animation: colorChange 4s infinite;
+}
+
+.key{
+  
+    border-radius: 1000px;
+    width: 320px;
+    height: 320px;
+    border-radius: 1000px;
+
+    border: 10px dotted rgb(34, 152, 255) ;
+    animation: colorChange 10s infinite;
+    margin-top: 80px;
+    justify-content: center;
+    animation: rotate10deg 2s infinite alternate;
+}
+
+
+
+
+
+
+.imgprogile{
+    width: 50%;
+    height: 100vh;
+    text-align: center;
+
+}
+.imgp{
+    transform: rotate(1deg);
+    width: 300px;
+    height: 300px;
+    border-radius: 1000px;
+    border: 10px solid rgb(34, 152, 255);
+    border: 10px dotted rgb(34, 152, 255) ;
+    animation: colorChange 5s infinite;
+    animation: rotate-10deg 2s infinite alternate;
+
+    transition: all 1s;
+}
+.imgp:hover{
+transform: scale(1.1);
+}
+
+.name{
+    height: 100vh;
+    width: 50%;
+    margin-top: 30px;
+}
+.name>h1{
+    color: #007bff;
+  
+}
+/* Media query for smaller screens */
+@media screen and (max-width: 768px) {
+    header {
+        display: none;
+      
+background-color: #2c2a2a;  
+
+
+}
+
+nav{
+display: block;
+display: flex;
+flex-direction: column;
+width: 90%;
+
+
+
+}
+nav a{
+
+  padding: 20px;
+    background-color: #ffffff;
     
     }
 
+
+.project-box {
+width: calc(90% - 20px); /* Full width without gap on smaller screens */
 }
 
 
 
 
 
+#section1 {
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.imgprogile
+{
+ 
+  
+    width: 90%;
 
 
+}
+.name{
+
+    width: 90%;
+    margin-top: 30px;
+
+
+
+
+}
+
+}
 
